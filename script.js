@@ -13,22 +13,31 @@ let addLowerCase = "";
 let addUpperCase = "";
 let addSpecialCharacter = "";
 
+//User will select the password length and all other criteria
 function generatePassword() {
   let chooseLength = (prompt("Please choose a password length"));
-
-  if(chooseLength < 8 || chooseLength > 128) {
+  if (isNaN(chooseLength) || chooseLength < 8 || chooseLength > 128) {
     alert ("For security, please select a password length between 8-128 characters.");
+    generatePassword();
   }
-}
+  //User will select the criteria of the password
+  let addLowerCase = confirm("Would you like to add lower case letters?");
+  let addUpperCase = confirm("Would you like to add upper case letters?");
+  let addSpecialCharacter = confirm("Would you like to add special characters?");
+  }
+
+  //If none of the criteria is selected, 
+  
 
 // Write password to the #password input
 function writePassword() {
   let password = generatePassword();
   let passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//Created password will be stored
+let securePassword = "";
