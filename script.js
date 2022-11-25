@@ -28,7 +28,7 @@ function generatePassword() {
   let addSpecialCharacter = confirm("Would you like to add special characters?");
   //If none of the criteria is selected,
   if (addLowerCase === false && addUpperCase === false && addSpecialCharacter === false) {
-    alert ("For security, at least one criteria option must be selected.");
+    alert ("For security, at least two criteria options must be selected.");
     let addNumbers = confirm ("Would you like to add numbers?");
     let addLowerCase = confirm("Would you like to add lower case letters?");
     let addUpperCase = confirm("Would you like to add upper case letters?");
@@ -45,6 +45,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-//Created password will be stored
-let securePassword = "";
