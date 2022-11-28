@@ -2,7 +2,7 @@
 let generateBtn = document.querySelector("#generate");
 
 //Arrays created below
-let number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 let upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 let specialCharacter = ["%", "&", ".", "*", "/", "<", ">", "!", "~", ".", ",", "?", "+", "@", "^", "_"];
@@ -26,7 +26,7 @@ function generatePassword() {
   let addLowerCase = confirm("Would you like to add lower case letters?");
   let addUpperCase = confirm("Would you like to add upper case letters?");
   let addSpecialCharacter = confirm("Would you like to add special characters?");
-  //If none of the criteria is selected,
+  //If none of the criteria is selected, questions restart
   if (addLowerCase === false && addUpperCase === false && addSpecialCharacter === false && addNumber === false) {
     alert ("For security, at least one criteria option must be selected.");
     let addNumber = confirm ("Would you like to add numbers?");
@@ -34,6 +34,32 @@ function generatePassword() {
     let addUpperCase = confirm("Would you like to add upper case letters?");
     let addSpecialCharacter = confirm("Would you like to add special characters?");
   }
+
+//if statements to gather answers to criteria questions
+  let criteriaSelection = []
+if (addNumber) {
+  criteriaSelection = criteriaSelection.concat(numbers)
+}
+if (addLowerCase) {
+  criteriaSelection = criteriaSelection.concat(lowerCase)
+}
+if (addUpperCase); {
+  criteriaSelection = criteriaSelection.concat(upperCase)
+}
+if (addSpecialCharacter) {
+  criteriaSelection = criteriaSelection.concat(specialCharacter)
+}
+
+//Need to fix console log issue, not generating
+console.log(criteriaSelection)
+
+let completedPass = ""
+
+for (var i = 0; i < chooseLength; i++) {
+  completedPass = completedPass + criteriaSelection[Math.floor(Math.random() * criteriaSelection.length)];
+}
+//Random password is generated
+return completedPass;
 }
 
 // Write password to the #password input
