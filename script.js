@@ -17,6 +17,7 @@ let addSpecialCharacter = "";
 //User will select the password length and all other criteria
 function generatePassword() {
   let chooseLength = (prompt("Please choose a password length"));
+//Use of isNan and if statement to avoid use of letters, special characters, and too short or long of a length
   if (isNaN(chooseLength) || chooseLength < 8 || chooseLength > 128) {
     alert ("For security, please select a password length between 8-128 characters.");
     generatePassword();
@@ -35,7 +36,7 @@ function generatePassword() {
     let addSpecialCharacter = confirm("Would you like to add special characters?");
   }
 
-//if statements to gather answers to criteria questions
+//If statements to gather answers to criteria questions
   let criteriaSelection = []
 if (addNumber) {
   criteriaSelection = criteriaSelection.concat(numbers)
@@ -54,11 +55,11 @@ if (addSpecialCharacter) {
 console.log(criteriaSelection)
 
 let completedPass = ""
-
+//Use of Math.floor to generate a random password
 for (var i = 0; i < chooseLength; i++) {
   completedPass = completedPass + criteriaSelection[Math.floor(Math.random() * criteriaSelection.length)];
 }
-//Random password is generated
+//Random password is shown to user
 return completedPass;
 }
 
