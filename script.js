@@ -22,14 +22,14 @@ function generatePassword() {
     generatePassword();
   }
   //User will select the criteria of the password
-  let addNumbers = confirm ("Would you like to add numbers?");
+  let addNumber = confirm ("Would you like to add numbers?");
   let addLowerCase = confirm("Would you like to add lower case letters?");
   let addUpperCase = confirm("Would you like to add upper case letters?");
   let addSpecialCharacter = confirm("Would you like to add special characters?");
   //If none of the criteria is selected,
-  if (addLowerCase === false && addUpperCase === false && addSpecialCharacter === false && addNumbers === false) {
+  if (addLowerCase === false && addUpperCase === false && addSpecialCharacter === false && addNumber === false) {
     alert ("For security, at least one criteria option must be selected.");
-    let addNumbers = confirm ("Would you like to add numbers?");
+    let addNumber = confirm ("Would you like to add numbers?");
     let addLowerCase = confirm("Would you like to add lower case letters?");
     let addUpperCase = confirm("Would you like to add upper case letters?");
     let addSpecialCharacter = confirm("Would you like to add special characters?");
