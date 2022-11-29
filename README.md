@@ -19,3 +19,7 @@ The end result is a site enables the user to create a randomized password that i
 The completed site can be found here: 
 
 https://karguello90.github.io/Secure-random-password-generator/
+
+<a href="https://postimg.cc/Jtm4VRpk" target="_blank"><img src="https://i.postimg.cc/Jtm4VRpk/Mobile-password-screenshot.jpg" alt="Mobile-password-screenshot"/></a><br/><br/>
+<a href="https://postimg.cc/rzJyq7HY" target="_blank"><img src="https://i.postimg.cc/rzJyq7HY/Random-password-screenshot.png" alt="Random-password-screenshot"/></a><br/><br/>
+
