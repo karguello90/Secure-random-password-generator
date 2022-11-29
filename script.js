@@ -14,7 +14,7 @@ let addLowerCase = "";
 let addUpperCase = "";
 let addSpecialCharacter = "";
 
-//User will select the password length and all other criteria
+//User will select the password length
 function generatePassword() {
   let chooseLength = (prompt("Please choose a password length"));
 //Use of isNan and if statement to avoid use of letters, special characters, and too short or long of a length
@@ -27,7 +27,7 @@ function generatePassword() {
   let addLowerCase = confirm("Would you like to add lower case letters?");
   let addUpperCase = confirm("Would you like to add upper case letters?");
   let addSpecialCharacter = confirm("Would you like to add special characters?");
-  //If none of the criteria is selected, questions restart
+  //If none of the criteria is selected, questionnaire restarts
   if (addLowerCase === false && addUpperCase === false && addSpecialCharacter === false && addNumber === false) {
     alert ("For security, at least one criteria option must be selected.");
     let addNumber = confirm ("Would you like to add numbers?");
@@ -54,12 +54,12 @@ if (addSpecialCharacter) {
 //Need to fix console log issue, not generating
 console.log(criteriaSelection)
 
+//password is created
 let completedPass = ""
 //Use of Math.floor to generate a random password
 for (var i = 0; i < chooseLength; i++) {
   completedPass = completedPass + criteriaSelection[Math.floor(Math.random() * criteriaSelection.length)];
 }
-//Random password is shown to user
 return completedPass;
 }
 
