@@ -20,9 +20,9 @@ The completed site can be found here:
 
 https://karguello90.github.io/Secure-random-password-generator/
 
-[url=https://postimg.cc/Jtm4VRpk][img]https://i.postimg.cc/Jtm4VRpk/Mobile-password-screenshot.jpg[/img][/url]
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/9Xw49MTJ/Mobile-password-screenshot.jpg" alt="Mobile-password-screenshot"/></a><br/><br/>
+<a href="https://postimages.org/" target="_blank"><img src="https://i.postimg.cc/gk9xHWHd/Random-password-screenshot.png" alt="Random-password-screenshot"/></a><br/><br/>
 
-[url=https://postimg.cc/rzJyq7HY][img]https://i.postimg.cc/rzJyq7HY/Random-password-screenshot.png[/img][/url]
 
 
 
